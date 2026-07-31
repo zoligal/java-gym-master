@@ -8,7 +8,8 @@ public class Client {
         this.name = name;
         this.age = age;
     }
-    public String getName() {          // <-- добавь этот метод
+
+    public String getName() {          
         return name;
     }
 
