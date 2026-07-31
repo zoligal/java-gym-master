@@ -321,7 +321,7 @@ public class GymApp {
                 System.out.println("Ошибка ввода: проверьте, что часы и минуты указаны числами.");
                 scanner.next();
             } catch (Exception error) {
-                System.out.println("Произошла ошибка: " +error.getMessage());
+                System.out.println("Произошла ошибка: " + error.getMessage());
             }
         }
     }
