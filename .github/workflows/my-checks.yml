@@ -1,0 +1,22 @@
+name: My Java Checks
+
+on:
+  pull_request:
+    branches: [ develop ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up JDK
+        uses: actions/setup-java@v3
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+      - name: Generate sources list
+        run: find ./src/main/java ./src/test/java -type f -name "*.java" > sources.txt
+      - name: Run Checkstyle
+        run: checkstyle -config checkstyle.xml -files $(cat sources.txt)
+      - name: Build with Maven
+        run: mvn clean package -DskipTests
