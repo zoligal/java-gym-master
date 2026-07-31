@@ -3,6 +3,14 @@
 import ru.yandex.practicum.gym.model.*;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+import ru.yandex.practicum.gym.model.TrainingSession;
+import ru.yandex.practicum.gym.model.CounterOfTrainings;
+import ru.yandex.practicum.gym.service.Timetable;
+import ru.yandex.practicum.gym.model.DayOfWeek;
+import ru.yandex.practicum.gym.model.TimeOfDay;
+import ru.yandex.practicum.gym.model.Group;
+import ru.yandex.practicum.gym.model.Coach;
+
 
 import java.util.List;
 
