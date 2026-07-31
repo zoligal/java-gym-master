@@ -1,15 +1,23 @@
-package ru.yandex.practicum.gym;
+package ru.yandex.practicum.gym.model;
 
 import java.util.Objects;
 
 public class TimeOfDay implements Comparable<TimeOfDay> {
 
-    //часы (от 0 до 23)
+    public static final TimeOfDay MORNING = new TimeOfDay(10, 0);
+    public static final TimeOfDay AFTERNOON = new TimeOfDay(14, 0);
+    public static final TimeOfDay EVENING = new TimeOfDay(18, 0);
+
     private int hours;
-    //минуты (от 0 до 59)
     private int minutes;
 
     public TimeOfDay(int hours, int minutes) {
+        if (hours < 0 || hours > 23) {
+            throw new IllegalArgumentException("Часы должны быть в диапазоне 0–23, получено: " + hours);
+        }
+        if (minutes < 0 || minutes > 59) {
+            throw new IllegalArgumentException("Минуты должны быть в диапазоне 0–59, получено: " + minutes);
+        }
         this.hours = hours;
         this.minutes = minutes;
     }
