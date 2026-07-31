@@ -3,10 +3,7 @@ package ru.yandex.practicum.gym.service;
 import ru.yandex.practicum.gym.model.*;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-import ru.yandex.practicum.gym.model.Coach;
-import ru.yandex.practicum.gym.model.Group;
-import ru.yandex.practicum.gym.model.DayOfWeek;
-import ru.yandex.practicum.gym.model.TimeOfDay;
+
 import java.util.List;
 
 public class TimetableTest {
@@ -112,6 +109,7 @@ public class TimetableTest {
         List<TrainingSession> sessionsAt14 = timetable.getTrainingSessionsForDayAndTime(DayOfWeek.MONDAY, new TimeOfDay(14, 0));
         Assertions.assertTrue(sessionsAt14.isEmpty(), "В понедельник в 14:00 не должно быть занятий");
     }
+
     @Test
     public void testGetCountByCoachesEmpty() {
         Timetable timetable = new Timetable();
