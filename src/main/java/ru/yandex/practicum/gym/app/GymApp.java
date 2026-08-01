@@ -10,6 +10,8 @@ import ru.yandex.practicum.gym.service.Timetable;
 import ru.yandex.practicum.gym.service.TrainingSession;
 import java.util.*;
 
+// FINAL_CHECK_SPRINT_6: код актуальный, прошу проверить
+
 public class GymApp {
     public static void main(String[] args) {
         TimeOfDay morning = TimeOfDay.MORNING;
